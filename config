@@ -1,0 +1,24 @@
+
+#
+# (c) BSD-2-Cause, link: https://opensource.org/licenses/BSD-2-Clause
+# (c) V. Soshnikov, mailto: dedok.mad@gmail.com
+#
+
+ngx_feature="Stat module"
+
+have=NGX_STAT_MODULE . auto/have
+have=NGX_STAT_INFLUX . auto/have
+
+ngx_addon_name=ngx_http_influx_module
+
+ngx_module_type=HTTP
+ngx_module_name=ngx_http_stat_module
+ngx_module_incs="$ngx_addon_dir/src"
+ngx_module_srcs="\
+    $ngx_addon_dir/src/ngx_http_stat_allocator.c\
+    $ngx_addon_dir/src/ngx_http_stat_array.c\
+    $ngx_addon_dir/src/ngx_http_stat_module.c\
+    $ngx_addon_dir/src/ngx_http_influx_net.c\
+"
+. auto/module
+

@@ -1,0 +1,8 @@
+__pycache__
+test-root
+nginx
+*.dSYM
+*.src.rpm
+.DS_Store
+*.pyc
+*_test
