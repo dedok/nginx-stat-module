@@ -332,7 +332,7 @@ static  ngx_http_stat_source_t ngx_http_stat_sources[] = {
         .re = 1,
         .get = ngx_http_stat_source_upstream_cache_status_rps,
         .aggregate = ngx_http_stat_aggregate_persec },
-
+#if 0
     {   .name = ngx_string("upstream_time"),
         .get = ngx_http_stat_source_upstream_time,
         .aggregate = ngx_http_stat_aggregate_avg },
@@ -340,6 +340,7 @@ static  ngx_http_stat_source_t ngx_http_stat_sources[] = {
     {   .name = ngx_string("upstream_header_time"),
         .get = ngx_http_stat_source_upstream_header_time,
         .aggregate = ngx_http_stat_aggregate_avg },
+#endif
 };
 
 static  ngx_http_stat_template_arg_t ngx_http_stat_template_args[] = {

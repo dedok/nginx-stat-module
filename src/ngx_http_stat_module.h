@@ -23,30 +23,19 @@
 #define ARR_SIZE(struct_) \
     (sizeof((struct_)) / sizeof(struct_[0]))
 
-static const u_char* DEFAULT_PARAMS =
-    "request_time|"
-    "bytes_sent|"
-    "body_bytes_sent|"
-    "request_length|"
-    "rps|"
-    "keepalive_rps|"
-    "response_2xx_rps|"
-    "response_3xx_rps|"
-    "response_4xx_rps|"
-    "response_5xx_rps|"
-    "upstream_time|"
+#define DEFAULT_PARAMS \
+    "request_time|" \
+    "bytes_sent|" \
+    "body_bytes_sent|" \
+    "request_length|" \
+    "rps|" \
+    "keepalive_rps|" \
+    "response_2xx_rps|" \
+    "response_3xx_rps|" \
+    "response_4xx_rps|" \
+    "response_5xx_rps|" \
+    "upstream_time|" \
     "upstream_header_time"
-#if defined (NGX_STAT_STUB)
-    "|"
-    "accepted|"
-    "handled|"
-    "requests|"
-    "active|"
-    "reading|"
-    "writing|"
-    "waiting|"
-#endif /** NGX_STAT_STUB */
-    ""
 
 #define TEMPLATE_VARIABLES(host, split, param, interval) \
     {host, split, param, interval}
