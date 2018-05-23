@@ -33,9 +33,7 @@
     "response_2xx_rps|" \
     "response_3xx_rps|" \
     "response_4xx_rps|" \
-    "response_5xx_rps|" \
-    "upstream_time|" \
-    "upstream_header_time"
+    "response_5xx_rps"
 
 #define TEMPLATE_VARIABLES(host, split, param, interval) \
     {host, split, param, interval}
