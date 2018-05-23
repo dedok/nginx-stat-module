@@ -119,7 +119,7 @@ Create measurement point in specific location.
 Example:
 ```nginx
     location /foo/ {
-        graphite_data nginx.foo;
+        stat nginx.foo;
     }
 ```
 
