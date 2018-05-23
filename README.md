@@ -57,9 +57,9 @@ Specify global settings for a whole server instance.
 Param     | Required | Default       | Description
 --------- | -------- | ------------- | -----------
 host      |          | gethostname() | host name for all tag
-server    | Yes      |               | carbon-cache server IP address
-protocol  | Yes      |               | carbon-cache server protocol (udp or tcp)
-port      |          | 2003          | carbon-cache server port
+server    | Yes      |               | an engine server IP address
+protocol  | Yes      |               | an engine type
+port      |          | 2003          | an engine server port
 frequency |          | 60            | how often send values to the engine
 intervals |          | 1m            | aggregation intervals, time interval list, vertical bar separator (`m` - minutes)
 params    |          | *             | limit metrics list to track, vertical bar separator
