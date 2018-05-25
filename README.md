@@ -198,9 +198,9 @@ To calculate percentile value for any parameter, set percentile level via `/`. E
 ### Dynamic module:
 -------------------
 ```bash
-$> wget 'http://nginx.org/download/nginx-1.9.2.tar.gz'
-$> tar -xzf nginx-1.9.2.tar.gz
-$> cd nginx-1.9.2/
+$> wget 'http://nginx.org/download/nginx-1.9.11.tar.gz'
+$> tar -xzf nginx-1.9.11.tar.gz
+$> cd nginx-1.9.11/
 $> ./configure --add-dynamic-module=/path/to/nginx-stat-module
 $> make
 $> make install
@@ -208,9 +208,9 @@ $> make install
 ### Static module:
 ------------------
 ```bash
-$> wget 'http://nginx.org/download/nginx-1.9.2.tar.gz'
-$> tar -xzf nginx-1.9.2.tar.gz
-$> cd nginx-1.9.2/
+$> wget 'http://nginx.org/download/nginx-1.9.11.tar.gz'
+$> tar -xzf nginx-1.9.11.tar.gz
+$> cd nginx-1.9.11/
 $> ./configure --add-module=/path/to/nginx-stat-module
 $> make
 $> make install
