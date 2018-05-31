@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  nginx:
+    build: .
+    command: /usr/local/nginx/nginx 
+    ports:
+      - "8081:8081"
+    links:
+      - influxdb
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
+    volumes:
+      - ./influxdb_data:/var/lib/influxdb
+      - ./influxdb.conf:/etc/influxdb/influxdb.conf
+    environment:
+      - INFLUXDB_DATA_ENGINE=tsm1
+      - INFLUXDB_REPORTING_DISABLED=false
